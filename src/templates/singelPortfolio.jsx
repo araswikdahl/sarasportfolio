@@ -57,7 +57,7 @@ const Body = styled.div`
 
 export default SingelPortfolio
 
-export const Head = () => <title > dynamsikt </title>
+export const Head = () => <title > single portfolio page </title>
 
 export const SingelPortfolioQuery = graphql`
 query SingelPortfolioQuery($slug: String) {

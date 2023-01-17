@@ -43,7 +43,7 @@ const Body = styled.div`
 
 export default IndexPage
 
-export const Head = () => < title > start sida </title>
+export const Head = () => < title > start page </title>
 
 
 // Graphql query

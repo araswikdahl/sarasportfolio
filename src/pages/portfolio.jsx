@@ -4,7 +4,7 @@ import '../css/style.css';
 import Header from "../components/header";
 import Footers from '../components/Footers';
 import styled from "styled-components";
-import screenshot from '../images/screenshot.jpg';
+// import screenshot from '../images/screenshot.jpg';
 import { useState } from 'react';
 import backgroundImg from '../images/newcode.png';
 
@@ -63,7 +63,7 @@ const Body = styled.div`
 
 export default PortfolioPage
 
-export const Head = () => < title > dynamsikt </title>
+export const Head = () => < title > portfolio page </title>
 
 
 // Graphql query

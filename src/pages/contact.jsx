@@ -47,7 +47,7 @@ const ContactPage = ({
 
 export default ContactPage
 
-export const Head = () => < title > start sida </title>
+export const Head = () => < title > contact page </title>
 
 //Graphql query
 

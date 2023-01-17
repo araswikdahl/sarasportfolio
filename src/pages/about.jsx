@@ -81,7 +81,7 @@ const AboutPage = ({
 
 export default AboutPage
 
-export const Head = () => < title > start sida </title>
+export const Head = () => < title > about page </title>
 
 //Graphql query
 

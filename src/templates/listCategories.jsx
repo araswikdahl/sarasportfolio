@@ -45,7 +45,7 @@ const Body = styled.div`
 
 export default ListCategories
 
-export const Head = () => <title > dynamsikt </title>
+export const Head = () => <title > list categories page </title>
 
 export const ListCategoriesQuery = graphql`
 query SingelPortfolioQuery($skill: String) {
