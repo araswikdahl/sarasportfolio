@@ -41,18 +41,13 @@ exports.createPages = async ({
           title
           slug
           skill
-          categorie {
-            categorieName
+          categori {
+            categori
           }
           img {
             file {
               url
             }
-          }
-          categorie {
-            categorieName
-            slug
-           
           }
         }
       }
@@ -68,13 +63,14 @@ exports.createPages = async ({
 
       actions.createPage({
         //URL
-        path: '/categories/' + node.skill,
+        path: '/categories/' + node.categori.categori,
         //Template
         component: path.resolve('./src/templates/listCategories.jsx'),
         context: {
-          skill: node.skill
+          skill: node.categori.categori
         }
       })
     ))
   }
+
 }

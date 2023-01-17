@@ -4,7 +4,6 @@ import '../css/style.css';
 import Header from "../components/header";
 import Footers from '../components/Footers';
 import styled from "styled-components";
-// import screenshot from '../images/screenshot.jpg';
 import { useState } from 'react';
 import backgroundImg from '../images/newcode.png';
 
@@ -14,6 +13,7 @@ const PortfolioPage = ({
 }) => {
   console.log(data, 'hej')
 
+
   return (
     <Body>
       <Header />
@@ -22,21 +22,19 @@ const PortfolioPage = ({
           <h1>Projects</h1>
           <div className="categories-container">
             <h4>Categories</h4>
-            {data.allContentfulProjectPage.edges.map(({ node }) => (
 
-              <Link to={"/categories/" + node.skill}>
-                <button className="categorie-btn" >{node.skill}</button>
-                {/* <button className="categorie-btn" onClick={handleClick} >{node.categorie[0].categorieName}</button> */}
+            {data.allContentfulProjectPage.edges.map(({ node }) => {
+              return <Link to={"/categories/" + node.categori.categori}>
+                <button className="categorie-btn" >{node.categori.categori}</button>
               </Link>
-
-            ))
+            })
             }
 
           </div>
           <div className="projects-wrapper">
             {data.allContentfulProjectPage.edges.map(({ node }) => (
               <Link to={"/project/" + node.slug}>
-                <img src={node.img.file.url} alt="" />
+                <img src={node.img.file.url} alt="picture of project" />
                 <div className="project-title-wrapper">
                   <h5> {node.title}</h5>
                   <button className="categorie-btn">{node.skill}</button>
@@ -70,34 +68,21 @@ export const Head = () => < title > portfolio page </title>
 
 export const IndexPageQuery = graphql`
     query PortfolioPageQuery { 
-        allContentfulCategories {
-        edges {
-          node {
-            categorieName
-            slug
-          }
-        }
-      }
         allContentfulProjectPage {
             edges {
               node {
                 title
                 slug
                 skill
-                categorie {
-                  categorieName
+                categori {
+                  categori
                 }
                 img {
                   file {
                     url
                   }
                 }
-                categorie {
-                  categorieName
-                  slug
-                 
-                 
-                }
+                
               }
             }
           }

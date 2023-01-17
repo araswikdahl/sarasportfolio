@@ -17,7 +17,7 @@ const ListCategories = ({ data }) => {
                         {data.allContentfulProjectPage.edges.map(({ node }) => (
 
                             <Link to={"/project/" + node.slug}>
-                                <img src={node.img.url} alt="" />
+                                <img src={node.img.url} alt="picture of project" />
                                 <div className="project-title-wrapper">
                                     <h5> {node.title}</h5>
                                     <button className="categorie-btn">{node.skill}</button>
@@ -49,21 +49,24 @@ export const Head = () => <title > list categories page </title>
 
 export const ListCategoriesQuery = graphql`
 query SingelPortfolioQuery($skill: String) {
-    
-    allContentfulProjectPage(filter: {skill: {eq: $skill}}) {
-        edges {
-          node {
-            title
-            skill
-            img {
+    allContentfulProjectPage(filter: {categori: {categori: {eq: $skill}}}) {
+      edges {
+        node {
+          title
+          slug
+          skill
+          categori {
+            categori
+          }
+          img {
               url
             }
-            slug
-            
-          }
+    
         }
       }
-  }
-
+    }
+    }
 `
+
+
 

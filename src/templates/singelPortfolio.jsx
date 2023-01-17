@@ -29,13 +29,13 @@ const SingelPortfolio = ({ data }) => {
 
           <div className="single-projects-wrapper">
             <div className="singel-portfolio-images">
-              <img src={portfolio.img1.url} alt="" />
+              <img src={portfolio.img1.url} alt="picture of project" />
             </div>
             <div className="singel-portfolio-images">
-              <img src={portfolio.img2.url} alt="" />
+              <img src={portfolio.img2.url} alt="picture of project" />
             </div>
             <div className="singel-portfolio-images">
-              <img src={portfolio.img3.url} alt="" />
+              <img src={portfolio.img3.url} alt="picture of project" />
             </div>
           </div>
 

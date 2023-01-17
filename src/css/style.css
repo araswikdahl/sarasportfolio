@@ -134,7 +134,7 @@ footer{
 }
 .about-main{ 
     min-height: 100vh;
-    padding: 10rem;
+    padding: 7rem;
     background-color: #121212;
     color: white;
     width: 100%;
@@ -222,6 +222,9 @@ font-size: 48px;
     }
     .btn-home{
         font-size: 20px;
+    }
+    .about-text-holder {
+        padding-bottom: 5rem;
     }
     
     }
@@ -524,7 +527,7 @@ font-size: 48px;
             justify-content: center;
         }
         .header-container h1{
-            font-size: 70px;
+            font-size: 60px;
         }
         .header-container h2{
             font-size: 40px;
@@ -545,6 +548,19 @@ font-size: 48px;
         .about-main{
             padding: 2rem;
         
+        }
+        .categories-container h4 {
+            font-size: 20px;
+        }
+        .contact-title-container h1 {
+            font-size: 50px;
+        }
+        .about-text-holder {
+            padding-bottom: 3rem;
+        }
+        .projects-wrapper a {
+            height: 400px;
+            width: 350px;
         }
         
         }
